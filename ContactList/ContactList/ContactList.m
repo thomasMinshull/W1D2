@@ -12,6 +12,18 @@
 
 
 -(void)addContact:(Contact *)newContact {
+    if (!self.list) {
+        self.list = [[NSMutableArray alloc] init];
+    }
+    
     [self.list addObject:newContact];
+}
+
+
+-(void)listContacts {
+    NSLog(@"Contacts:");
+    for (Contact *contact in self.list) {
+        NSLog(@"%d:%@",(int)[self.list indexOfObject:contact], contact.userName);
+    }
 }
 @end

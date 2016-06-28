@@ -28,6 +28,11 @@ int main(int argc, const char * argv[]) {
                 Contact *firstContact = [[Contact alloc] initWithUsername:username andPassword:password];
                 
                 [contactList addContact:firstContact];
+            } else if([usernameInput isEqualToString:@"list"]){
+                [contactList listContacts];
+            } else if ([usernameInput isEqualToString:@"q"]){
+            } else {
+                NSLog(@"Sorry, I didn't understand. \nIf you want to create a new contact type \"new\"\nIf you want to see your contact type \"list\"\nIf you want to quit type \"q\"");
             }
         }
         
