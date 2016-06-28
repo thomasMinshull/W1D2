@@ -8,10 +8,15 @@
 
 #import "InputCollector.h"
 
+@interface InputCollector () {
+    char inputChars[255];
+}
+
+@end
+
 @implementation InputCollector
 
 -(NSString *)inputForPrompt:(NSString *)promptString {
-    char inputChars[255];
     
     NSLog(@"%@",promptString);
     fgets(inputChars, 255, stdin);

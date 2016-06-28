@@ -8,16 +8,27 @@
 
 #import <Foundation/Foundation.h>
 #import "InputCollector.h"
+#import "Contact.h"
+#import "ContactList.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         InputCollector *inputCollector = [[InputCollector alloc] init];
+        ContactList *contactList = [[ContactList alloc] init];
         NSString *usernameInput;
         
         while (![usernameInput isEqualToString:@"q"]) {
             
-            usernameInput = [inputCollector inputForPrompt:@"Enter your username"];
+            usernameInput = [inputCollector inputForPrompt:@"What do you want to do?"];
             
+            if ([usernameInput isEqualToString:@"new"]) {
+                NSString *username = [inputCollector inputForPrompt:@"Enter user name"];
+                NSString *password = [inputCollector inputForPrompt:@"Enter password"];
+                
+                Contact *firstContact = [[Contact alloc] initWithUsername:username andPassword:password];
+                
+                [contactList addContact:firstContact];
+            }
         }
         
         NSLog(@"see you!");
