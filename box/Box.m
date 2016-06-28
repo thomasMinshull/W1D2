@@ -24,4 +24,21 @@
     return self.length * self.height * self.width;
 }
 
+- (int)canContainBox:(Box *)box {
+    if ([self isSmallerBox:box]) {
+        NSLog(@"The Box Provided doesn't fit");
+        return 0;
+    } else {
+        NSNumber *result = [NSNumber numberWithFloat:(self.volume / box.volume)];
+        return (int)[result integerValue];
+    }
+}
+
+- (bool)isSmallerBox:(Box *)box {
+    if (self.volume >= box.volume) {
+        return false;
+    } else {
+        return true;
+    }
+}
 @end

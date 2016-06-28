@@ -17,4 +17,5 @@
 
 - (instancetype)initWithHeight:(float)height Width:(float)width andLenght:(float)length;
 
+- (int)canContainBox:(Box *)box;
 @end
