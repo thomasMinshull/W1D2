@@ -20,4 +20,8 @@
     return self;
 }
 
+- (float)volume {
+    return self.length * self.height * self.width;
+}
+
 @end

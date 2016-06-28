@@ -13,6 +13,7 @@
 @property float height;
 @property float width;
 @property float length;
+@property (readonly) float volume;
 
 - (instancetype)initWithHeight:(float)height Width:(float)width andLenght:(float)length;
 
