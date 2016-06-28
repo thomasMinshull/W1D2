@@ -28,7 +28,6 @@ int main(int argc, const char * argv[]) {
 //        }
         for (NSNumber *n in array) {
             if ([n isEqual:goal]) break;
-            NSLog(@"test");
         }
         
         NSDate *methodEnd = [NSDate date];
