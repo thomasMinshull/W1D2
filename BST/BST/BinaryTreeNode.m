@@ -12,21 +12,23 @@
 
 - (void)insert:(NSObject *)newObject {
     if ([newObject isLessThan:self.object] || [newObject isEqualTo:self.object]) {
-        // check if left child exists
         if (!self.leftNode) {
+            // if no left child, make newObject left child
             BinaryTreeNode *leftChild = [[BinaryTreeNode alloc] init];
             leftChild.object = newObject;
             self.leftNode = leftChild;
         } else {
+            // else call recursively on left child
             [self.leftNode insert:newObject];
         }
     } else {
-        // check if right child exists
         if (!self.rightNode) {
+            // if no left child, make newObject right child
             BinaryTreeNode *rightChild = [[BinaryTreeNode alloc] init];
             rightChild.object = newObject;
             self.rightNode = rightChild;
         } else {
+            // else call recursively on right child
             [self.rightNode insert:newObject];
         }
     }

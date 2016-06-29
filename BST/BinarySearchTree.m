@@ -21,26 +21,12 @@
 
 - (void)insertObject:(NSObject *)newObject {
     [self.root insert:newObject];
-//    if ([newObject isLessThan:self.root] || [newObject isEqualTo:self.root]) {
-//        // check if left child exists
-//        if (!self.root.leftNode) {
-//            BinaryTreeNode *leftChild = [[BinaryTreeNode alloc] init];
-//            leftChild.object = newObject;
-//            self.root.leftNode = leftChild;
-//        } else {
-//            self.root = self.root.leftNode;
-//            [[[BinarySearchTree alloc] initWithObject:self.root.leftNode] insertObject:newObject];
-//        }
-//        
-//    } else if ([self.root isLessThan:newObject]) {
-//        
-//    } else {
-//        
-//    }
     
 }
 - (BinaryTreeNode *)find:(NSObject *)object {
-    return nil;
+    if ([self.root isLessThan:object]) {
+        <#statements#>
+    }
 }
 - (BinaryTreeNode *)deleteObject:(NSObject *)object {
     return nil;

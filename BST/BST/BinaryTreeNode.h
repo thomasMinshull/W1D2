@@ -13,10 +13,11 @@
 @property (nonatomic, strong) NSObject *object;
 @property (nonatomic, strong) BinaryTreeNode *leftNode;
 @property (nonatomic, strong) BinaryTreeNode *rightNode;
-@property (nonatomic, strong) BinaryTreeNode *parent;
+//@property (nonatomic, strong) BinaryTreeNode *parent;
 
-- (BOOL)isLeftChildOfParent;
+//- (BOOL)isLeftChildOfParent;
 
 - (void)insert:(NSObject *)newObject;
+
 
 @end
