@@ -17,4 +17,6 @@
 
 - (BOOL)isLeftChildOfParent;
 
+- (void)insert:(NSObject *)newObject;
+
 @end
